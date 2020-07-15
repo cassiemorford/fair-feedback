@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://fair-feedback.net/sitemap.xml
+Host: https://fair-feedback.net
