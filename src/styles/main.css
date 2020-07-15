@@ -14,7 +14,7 @@ html, body, .__gatsby {
     color: white;
 }
 .feedback--gif {
-    margin: 40px 0 10px 5%;
+    margin: 20px 0 10px 5%;
     width: 90%;
     height: 70px;
     position: relative;
@@ -22,11 +22,13 @@ html, body, .__gatsby {
     flex-direction: row;
     height: 70px;
 }
+
 .feedback--main-gif {
     width: 60%;
     object-fit: contain;
     height: 70px;
 }
+
 .feedback--rotating-gif {
     width: 30%;
     text-align: center;
@@ -110,6 +112,12 @@ html, body, .__gatsby {
     background: #444444;
 }
 
+.feedback--none {
+    color: #89d1b5;
+    text-align: center;
+    margin: 40px;
+}
+
 .word-warning {
     color: salmon;
     font-weight: 700;
@@ -129,21 +137,12 @@ html, body, .__gatsby {
     color: skyblue;
 }
 
-.footer {
-    padding: 4px 8px;
-    border-radius: 20px;
-    position: fixed;
-    bottom: 10px;
-    left: 10px;
-    background: pink;
-    opacity: 0;
-    transition: all 1s;
-}
 
-.footer a {
+.footer {
     font-family: 'inconsolata', 'sans serif';
     color: white;
     text-decoration: none;
+    padding-left: 10px;
 }
 
 

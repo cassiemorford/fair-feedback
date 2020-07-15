@@ -37,7 +37,7 @@ class VerifiedTextbox extends Component {
     render() {
         return (  
             <div>
-                <textarea rows="10" columns="30" placeholder={"put feedback here"} className='feedback--textbox' value={this.state.content} onChange={this.handleChange}/>
+                <textarea rows="10" columns="30" placeholder={"put feedback here -- your text is never stored or tracked"} className='feedback--textbox' value={this.state.content} onChange={this.handleChange}/>
                 <div className="feedback--output" dangerouslySetInnerHTML={{ __html: this.state.formattedContent }}/>     
             </div>
         )

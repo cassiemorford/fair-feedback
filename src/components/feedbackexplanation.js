@@ -15,7 +15,8 @@ class FeedbackExplanation extends Component {
 
         return (  
             <div className='feedback--explanation'>
-                {usedWords.map(w => <WordFixSuggestion word={w}/>)}
+                {!usedWords.length && <div className="feedback--none">so far, so good</div>}
+                {!!usedWords.length && usedWords.map(w => <WordFixSuggestion word={w}/>)}
             </div>
         )
     }
