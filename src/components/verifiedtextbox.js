@@ -1,5 +1,6 @@
 import React, {Component} from "react"
 import { withMixpanel } from 'gatsby-plugin-mixpanel';
+import { format } from "url";
 
 
 class VerifiedTextbox extends Component {
@@ -13,6 +14,7 @@ class VerifiedTextbox extends Component {
 
     handleChange = (ev) => {
         let content, formattedContent = ev.target.value;
+        formattedContent = formattedContent.toLowerCase();
         let {words} = this.props;
         let usedWords = [];
 

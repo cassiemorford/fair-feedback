@@ -15,9 +15,7 @@ class FeedbackExplanation extends Component {
 
         return (  
             <div className='feedback--explanation'>
-                <ul>
-                    {usedWords.map(w => <WordFixSuggestion word={w}/>)}
-                </ul>
+                {usedWords.map(w => <WordFixSuggestion word={w}/>)}
             </div>
         )
     }

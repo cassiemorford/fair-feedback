@@ -16,6 +16,49 @@ html, body, .__gatsby {
 .feedback--gif {
     margin: 40px 0 10px 5%;
     width: 90%;
+    height: 70px;
+    position: relative;
+    display:flex;
+    flex-direction: row;
+    height: 70px;
+}
+.feedback--main-gif {
+    width: 60%;
+    object-fit: contain;
+    height: 70px;
+}
+.feedback--rotating-gif {
+    width: 30%;
+    text-align: center;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.feedback--gif-1, .feedback--gif-2, .feedback--gif-3  {
+    object-fit: contain;
+    margin: 0;
+    bottom: 0;
+    height: 70px;
+}
+.feedback--gif-1 {
+    animation-name: img1FadeInOut;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 9s;
+}
+.feedback--gif-2 {
+    animation-name: img2FadeInOut;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 9s;
+}
+.feedback--gif-3 {
+    animation-name: img3FadeInOut;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 9s;
 }
 
 .invisible {
@@ -35,15 +78,19 @@ html, body, .__gatsby {
     display: flex;
     flex-direction: row;
     position: relative;
-    width: 100%;
+    width: 95%;
     height: 90vh;
 }
 
 .feedback--input, .feedback--explanation {
-    border: 1px solid #bbccbc;
     width: 100%;
     margin: 10px;
     overflow-y: scroll;
+}
+
+.feedback--explanation { 
+    border: 1px solid #bbccbc;
+    border-radius: 5px;
 }
 
 .feedback--textbox {
@@ -59,6 +106,8 @@ html, body, .__gatsby {
 .feedback--output {
     margin: 5%;
     width: 90%;
+    padding: 10px;
+    background: #444444;
 }
 
 .word-warning {
@@ -69,6 +118,7 @@ html, body, .__gatsby {
 .word-section {
     border-bottom: 1px solid salmon;
     padding: 10px 0;
+    margin: 0 5%;
 }
 
 .word--suggestion {
@@ -138,5 +188,84 @@ html, body, .__gatsby {
     100% {
         left: 22%;
         top: 13.5%;
+    }
+}
+
+@keyframes img1FadeInOut {
+    0% {
+        opacity:1;
+        width: 100%;
+        height: auto;
+    }
+    33% {
+        opacity:1;
+        width: 100%;
+        height: auto;
+    }
+    34% {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+    100% {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+}
+
+@keyframes img2FadeInOut {
+    0% {
+        opacity:0;
+        width: 0;
+        height: 0;
+    }
+    33% {
+        opacity:0;
+        width: 0;
+        height: 0;
+    }
+    34% {
+        opacity:1;
+        width: 100%;
+        height: auto;
+    }
+    66% {
+        opacity:1;
+        width: 100%;
+        height: auto;
+    }
+    67% {
+        opacity:0;
+        width: 0;
+        height: 0;
+    }
+    100% {
+        opacity:0;
+        width: 0;
+        height: 0;
+    }
+}
+
+@keyframes img3FadeInOut {
+    0% {
+        opacity:0;
+        width: 0;
+        height: 0;
+    }
+    66% {
+        opacity:0;
+        width: 0;
+        height: 0;
+    }
+    67% {
+        opacity:1;
+        width: 100%;
+        height: auto;
+    }
+    100% {
+        opacity:1;
+        width: 100%;
+        height: auto;
     }
 }
