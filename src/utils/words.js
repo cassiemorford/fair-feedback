@@ -3,12 +3,12 @@ const GENDERED = {
     'TONE' : `this is tone policing`,
     'UNTHREATENING': `this word is used to praise women for being non-threatening`,
     'INAPPROPRIATE': `it is inappropriate to use this word to describe a coworker`,
-    'DISAGREEING': `it is often used for people who "disagree while female"`,
-    'NONINCLUSIVE': `it erases people who don't identify as men`
+    'DISAGREEING': `this word is often used for people who "disagree while female"`,
+    'NONINCLUSIVE': `this word erases people who don't identify as men`
 }
 
 const ABLEIST = {
-    'ABLEIST': `it perpetuates ableist language`
+    'ABLEIST': `this word perpetuates ableist language`
 }
 const CALLOUS = {
     'WAR': `it may be seen as making light of war`,
@@ -25,9 +25,9 @@ const TRANSPHOBIC = {
 const MISC = {
     'SLUR': `this is a slur`,
     'DERIVED_FROM_SLUR': `this is derived from a slur`,
-    'BETTER_LANUAGE_EXISTS': `better language exists`
+    'BETTER_LANUAGE_EXISTS': `better language exists`,
+    'CULTURAL_APPROPRIATION': `This term is cultural appropriation, and shouldn't be used by individuals from outside of its original culture`
 }
-
 
 const REASONS = {
     GENDERED,
@@ -36,8 +36,7 @@ const REASONS = {
     RACIST,
     TRANSPHOBIC,
     MISC
-}
-
+};
 const genderedWords = [
     {
         word: 'bossy',
@@ -313,7 +312,7 @@ const racistWords = [
     {
         word: 'peanut gallery',
         reason: REASONS.RACIST.RACIST_ORIGINS,
-        suggestion: null,
+        suggestion: 'hecklers',
         source: 'https://www.businessinsider.com/offensive-phrases-that-people-still-use-2013-11#3peanut-gallery-3'
     },
     {
@@ -333,6 +332,12 @@ const racistWords = [
         reason: REASONS.RACIST.RACIST_ORIGINS,
         suggestion: null,
         source: 'https://www.nytimes.com/2017/08/24/upshot/how-redlinings-racist-effects-lasted-for-decades.html'
+    },
+    {
+        word: 'grandfathered',
+        reason: REASONS.RACIST.RACIST_ORIGINS,
+        suggestion: 'legacied',
+        source: null
     },
     {
         word: 'eenie, meenie, miney, mo',
@@ -449,10 +454,22 @@ const miscWords = [
         source: null,
     },
     {
+        word: 'diversity candidate',
+        reason: REASONS.MISC.BETTER_LANGUAGE_EXISTS,
+        suggestion: `candidate from an underrepresented population`,
+        source: null,
+    },
+    {
         word: 'eskimo',
         reason: REASONS.MISC.BETTER_LANGUAGE_EXISTS,
         suggestion: `Inuit`,
         source: 'https://www.businessinsider.com/offensive-phrases-that-people-still-use-2013-11#8-eskimo-8',
+    },
+    {
+        word: 'spirit animal',
+        reason: REASONS.MISC.CULTURAL_APPROPRIATION,
+        suggestion: `Patronus, familiar`,
+        source: 'https://www.babbel.com/en/magazine/common-racist-words-phrases',
     },
 ];
 

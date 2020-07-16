@@ -2,15 +2,18 @@ html, body, .__gatsby {
     height: calc(200vh - 72px);
     overflow:hidden;
     position: relative;
-    font-family: 'inconsolata', 'sans-serif';
     height: 100vh;
+}
+
+body, html {
+    background: #222222;
 }
 
 *, body, html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background: #222222;
+    font-family: 'Cooper Hewitt', 'sans-serif';
     color: white;
 }
 .feedback--gif {
@@ -63,9 +66,10 @@ html, body, .__gatsby {
     animation-duration: 9s;
 }
 
-.invisible {
-    visibility: hidden;
-    display: none;
+.feedback--intro {
+    margin: 0 5%;
+    font-size: 15px;
+    color: #dddddd;
 }
 
 .underline {
@@ -95,14 +99,15 @@ html, body, .__gatsby {
     border-radius: 5px;
 }
 
-.feedback--textbox {
+.DraftEditor-root {
     margin: 5%;
     width: 90%;
     max-width: 90%;
     outline: none;
     border: none;
     box-shadow: 0px 1px 4px 2px #89d1b5;
-    padding: 5px;
+    padding: 10px;
+    color: white;
 }
 
 .feedback--output {
@@ -139,28 +144,14 @@ html, body, .__gatsby {
 
 
 .footer {
-    font-family: 'inconsolata', 'sans serif';
     color: white;
     text-decoration: none;
     padding-left: 10px;
 }
 
-
-@keyframes blink {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+.footer a {
+    text-decoration: none;
 }
-
-  @keyframes fadein {
-    0% { opacity: 0; }
-    10% { opacity: 1;}
-    50% { opacity: 0;}
-    100% { opacity: 0; }
-  }
 
 @keyframes wiggle {
     0% {
@@ -268,3 +259,10 @@ html, body, .__gatsby {
         height: auto;
     }
 }
+
+@media only screen and (max-width: 480px) {
+    .feedback {
+        flex-direction: column;
+        height: 200vh;
+    }
+  }
