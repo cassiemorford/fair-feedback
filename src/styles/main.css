@@ -16,6 +16,7 @@ body, html {
     font-family: 'Cooper Hewitt', 'sans-serif';
     color: white;
 }
+
 .feedback--gif {
     margin: 20px 0 10px 5%;
     width: 90%;
@@ -142,6 +143,18 @@ body, html {
     color: skyblue;
 }
 
+.pronoun {
+    color: skyblue;
+}
+
+.pronoun--form {
+    display: flex;
+    flex-direction: column;
+}
+
+.pronoun--form label input{
+    margin-right: 8px;
+}
 
 .footer {
     color: white;
